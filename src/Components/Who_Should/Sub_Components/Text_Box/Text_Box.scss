@@ -1,0 +1,98 @@
+.Text_Box_container{
+    padding: 4rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: #fff;
+    background-image: url('../../img/50-50_background_PNG.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    min-height: 80vh;
+  
+    @media screen and (max-width:1100px){
+      padding: 1rem 2rem;
+    }
+    @media screen and (max-width:850px){
+      width: 100%;
+      padding: 4rem 4rem;
+    }
+  
+    &::after{
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #0b0a1a, $alpha: 0.2);
+      z-index: -2;
+    }
+  }
+  
+  .Text_Box__content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .Text_Box-header{
+    margin-top: 0;
+    width: fit-content;
+    color: #ff7e00;
+  }
+  
+  .Text_Box__paragraph{
+    margin-bottom: 1rem;
+    margin-top: 0;
+    font-weight: 300;
+    line-height: 1.6rem;
+  }
+  
+  .Text_Box__CTAs{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width:1200px){
+      margin-top: 0.5rem;
+      flex-direction: column;
+      width: fit-content;
+    }
+  }
+  
+  .Text_Box__CTA{
+    border-radius: 0.1rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 2.2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+    
+  }
+  
+  .Text_Box__CTA-primary{
+    border:0.1rem solid #e300ff;
+    &:hover{
+      background-color: #c921c9;
+      border-color: #c921c9;
+    }
+    &:focus{
+      background-color: #3d033d;
+      border: 0.1rem #000 solid;
+    }
+  }
+  
+  .Text_Box__CTA-secondary{
+    border:0.1rem solid #ff7e00;
+    &:hover{
+      background-color: #da6d01;
+      border-color: #da6d01;
+    }
+    &:focus{
+      background-color: #8d5c00;
+      border: 0.1rem solid #000;
+    }
+  }

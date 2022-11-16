@@ -1,0 +1,32 @@
+.Sponsor_Page__container{
+    color:#fff;
+    display: flex;
+    padding: 0.5rem 2rem;
+
+    @media screen and (max-width:900px) {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.Sponsor_Page__text{
+    width: 60%;
+}
+
+
+.Sponsor_page_form{
+    padding: 2rem 0 2rem 2rem;
+    width: 40%;
+  
+}
+.Sponsor_Page__text,.Sponsor_page_form{
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+}
+
+.Sponsor_page_form{
+    @media screen and (max-width: 900px) {
+        padding: 0;
+    }
+}

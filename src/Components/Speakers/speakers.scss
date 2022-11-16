@@ -1,0 +1,210 @@
+#Keynotes-container{
+  background-color: #100e26;
+}
+  @keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.Speakers__container {
+  background-color: #0b0a1a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 5rem;
+
+  @media screen and (max-width: 700px){
+    padding: 1rem;
+  }
+  
+
+  .page__title{
+    font-weight: 600;
+    transition: all ease-in 0.7s;
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    @media screen and (max-width: 700px){
+      font-size: 1.25rem;
+    }
+  }
+ 
+
+  .keynotes__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    
+    margin-top: 3rem;
+
+    .keynote-speaker{
+      width: 18%;
+      display: flex;
+      margin: 0 2rem 2rem;      
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 0.35rem #151231 solid;
+      @media screen and (max-width:400px) {
+        width: 100%;
+      }
+      @media screen and (min-width:401px) and (max-width:1000px) {
+        width: 33%;
+      }
+
+     
+      .hollow-speaker{
+        animation: gradient-move 3s infinite;
+        background-size: 300% 300% !important;
+      }
+
+      .speaker-image__container{
+        border-radius: 50%;
+        width: 100%;
+        margin-bottom: 3rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #151231;
+        position: relative;
+      }
+
+
+      .speaker-image__container::before{
+        content: '';
+      display: block;
+      padding-bottom: 100%;
+      }
+     
+      .speaker-name{
+        margin: 0;
+      }
+      .speaker-profession{
+        padding:0.35rem 0.5rem 1rem ;
+        text-align: left;
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+    }
+    
+  }
+}
+
+.speaker-modal-wall{
+    transition: all ease .6s;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+     background-color: rgba($color: #151231, $alpha: 0.9);
+      align-items: center;
+      justify-content: center;
+
+    .speaker-modal{
+      background-color: #100e26;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      color: #fff;
+      width: 50%;
+      max-height: 65%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      
+      @media screen and (max-width: 400px) {
+        width: 80%;
+        font-size: 0.75rem;
+      }
+
+      @media screen and (min-width:401px) and (max-width:1000px) {
+        width: 70%;
+      }
+
+      .speaker-modal-title{
+        margin: 0;
+        
+      }
+
+      .speaker-modal-profession{
+        margin: 0 0 1rem 0;
+        @media screen and (max-width: 1000px) {
+          text-align: center;
+          margin: 1rem;
+        }
+      }
+    .speaker-modal-image{
+        margin: 1rem 0;
+        border-radius: 50%;
+          width: 30%;
+          margin-bottom: 1rem;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-color: #fff;
+
+          @media screen and (max-width: 700px) {
+            width: 50%;
+          }
+    }
+    .speaker-modal-image::before{
+      content:'';
+      padding-bottom: 100%;
+      display: flex;
+    }
+    .speaker-modal-bio{
+      overflow-y: scroll;
+      padding: 0 2rem;
+      margin-bottom: 0.25rem;
+      .speaker-bio-paragraph{
+        margin-top: 0;
+        line-height: 1.7rem;
+      }
+      @media screen and (max-width: 700px) {
+        padding: 0 0.5rem;
+      }
+    }
+    // .speaker-modal-bio::-webkit-scrollbar{
+    //   display: none;
+    // }
+  }
+
+
+}
+
+.Speakers__noresults_container{
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-direction: column;
+}
+
+.Speakers_search_bar{
+  display: inline-block;
+  width: fit-content;
+  align-self: center;
+  margin: 3rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.15rem 0;
+  border-radius: 2rem;
+  max-width: 90%;
+}

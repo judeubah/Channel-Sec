@@ -1,0 +1,20 @@
+.Image_Box_container{
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    @media screen and (max-width: 900px) {
+      background-attachment: scroll;
+    }
+      &::after{
+      content: ' ';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #0b0a1a, $alpha: 0.6);
+      z-index:1;
+    }
+   
+  }

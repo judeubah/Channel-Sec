@@ -1,0 +1,56 @@
+@import '../../Styles/brand-colours.scss';
+.Venue__section{
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 760px) {
+        flex-direction: column;
+    }
+}
+
+.Venue__text, .Venue__Map{
+    width: 50%;
+    height: 100%;
+    @media screen and (max-width: 760px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.Venue__Map{
+    @media screen and (max-width: 760px) {
+        height: 50vh
+    }
+}
+
+.Venue__text{
+    padding: 10rem 4rem;
+    @media screen and (max-width: 760px) {
+        padding: 1rem ;
+    }
+}
+
+
+.Venue__Map_iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.Venue__title{
+    padding-bottom: 1rem;
+    border-bottom: 1px $purple_light solid;
+    display: inline-block;
+}
+
+.Venue__paragraph{
+    line-height: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 1.5rem;
+}
+
+.Venue__link{
+    color: $orange_main
+}

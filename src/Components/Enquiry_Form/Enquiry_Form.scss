@@ -1,0 +1,187 @@
+@import '../../Styles/brand-colours.scss';
+.Enquiry_Form_Component{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Enquiry_Form{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.enquiry-form-name{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.phone_number{
+    display: flex;
+    align-items: center;
+    @media screen and (max-width:760px) {
+        flex-direction: column;
+    }
+}
+
+
+.phone_form_input_code{
+    box-shadow: 0px 6px 14px -7px rgb(0 0 0 / 20%) !important;
+    border-radius: 5px !important;
+    transition: all 0.5s ease !important;
+    display: block;
+    padding: 6px 12px;
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+    margin-right: 1rem ;
+    &:hover{
+    box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 30%) !important;
+    transition: all 0.5s ease !important;
+    }
+}
+
+.phone_form_input{
+    box-shadow: 0px 6px 14px -7px rgb(0 0 0 / 20%) !important;
+    border-radius: 5px !important;
+    transition: all 0.5s ease !important;
+    display: block;
+    padding: 6px 12px;
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+    &:hover{
+    box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 30%) !important;
+    transition: all 0.5s ease !important;
+    }
+}
+
+.phone_form_input_code,.phone_form_input{
+    @media screen and (max-width:760px) {
+        width:100%;
+    margin-right:0;
+    }
+}
+
+.form_input{
+    box-shadow: 0px 6px 14px -7px rgb(0 0 0 / 20%) !important;
+    border-radius: 5px !important;
+    transition: all 0.5s ease !important;
+    display: block;
+    width: 100% !important;
+    padding: 6px 12px;
+    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555555;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+
+    &:hover{
+    box-shadow: 0px 10px 20px -5px rgb(0 0 0 / 30%) !important;
+    transition: all 0.5s ease !important;
+    }
+}
+
+.delegate_choices{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.delegate_choice{
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 0 1rem;
+    margin: 0 0.5rem 0.25rem 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+}
+.bright{
+    background-color: rgba($color: #d3970b, $alpha: 1.0);
+}
+
+.clear_all{
+    background-color: red;
+    border-radius: 25px;
+    padding: 0.5rem 3rem;
+}
+
+.enquiry-fill-in{
+    color: #ff0000;
+    margin: 0;
+    font-size: 12px;
+}
+
+.enquiry-form-failure, .enquiry-form-success{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    i{
+        font-size: 7rem;
+        margin-bottom: 2rem;
+    }
+    line-height: 150%;
+    p {
+        a{
+            color: inherit;
+        }
+    }
+}
+
+.enquiry-form-failure-icon{
+    color: red;
+}
+.enquiry-form-success-icon{
+    color: green;
+}
+
+.Enquiry_Form_Submit{
+    background-color: rgba($color: #000000, $alpha: 0.0);
+    border: 2px solid $orange-main;
+    color: $orange_main;
+    width: fit-content;
+    font-size: 2rem;
+    align-self: center;
+    padding: 0.5rem 2rem;
+    transition: all 0.35s ease;
+    margin-top: 3rem;
+    &:hover{
+        background-color: #da6d01;
+        border-color: #da6d01;
+        color: #fff;
+      }
+      &:focus{
+        background-color: #da6e0125;
+        border-color: #da6e01a1;
+      }
+      
+}

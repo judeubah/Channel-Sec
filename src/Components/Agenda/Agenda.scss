@@ -1,0 +1,153 @@
+@import '../../Styles/brand-colours.scss';
+
+.agenda-page{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 3rem 0;
+  width: 100%;
+  background-color: #100e26;
+  align-items: center;
+  padding-bottom: 2rem;
+
+  @media screen and (max-width: 575px) {
+    padding: 0 0 2rem;
+  }
+  @media screen and (max-width:1400px) and (min-width: 576px){
+    padding: 0 1.5rem 2rem;
+  }
+}
+
+.agenda-page__container{
+  width: 85%;
+  margin-top:3rem;
+  
+  @media screen and (max-width:1400px) and (min-width: 650px){
+    width: 100%;
+  }
+}
+
+.agenda-title__container{
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.agenda-page-title{
+  border-bottom: 1px solid #ff7e00;
+  width: 60%;
+  padding-bottom: 1rem;
+}
+
+.agenda-content__container{
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.agenda-item{
+  display: flex;
+  align-items: center;
+  border-bottom: 2.5px solid #151231;
+  width: 85%;
+  padding: 1.5rem;
+  @media screen and (max-width: 560px) {
+    flex-direction: column;
+    padding: 1.5rem 0;
+  }
+  @media screen and (max-width:1400px) and (min-width: 560px){
+    width: 100%;
+  }
+}
+
+.agenda-item:hover{
+.agenda-time{
+  color: #ff7e00;
+  }
+  background-color: #151231;
+}
+
+.agenda-time{
+  color: #e300ff;
+  font-weight: 500;
+  width: 6%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  align-self: flex-start;
+}
+
+.agenda-article{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @media screen and (max-width:1400px) and (min-width: 561px){
+    padding: 0 2rem;
+  }
+  
+}
+
+.agenda-item-title, .agenda-item-description{
+  font-weight: 200;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.agenda-item-title{
+   font-size: 1rem;
+   align-self: flex-start;
+}
+
+.agenda-item-description{
+  color:#ff7e00;
+
+}
+
+.agenda-closing-remark{
+  color: #ff7e00;
+  font-size: 0.75rem;
+  margin-top: 2rem;
+}
+
+.day_buttons{
+  display: flex;
+  margin-bottom: 1rem;
+  width: 20%
+}
+
+.agenda_morning_button, .agenda_afternoon_button{
+  background-color: rgba($color: #000000, $alpha: 0.0);
+  color: #fff;
+  margin-right: 1rem;
+  padding: 4% 30%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  @media screen and (max-width: 560px) {
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem
+  }
+}
+
+.agenda_morning_button{
+  border: 2px solid $purple_light;
+  &:hover{
+    background-color: #c921c9;
+    border-color: #c921c9;
+  }
+  &:focus{
+    background-color: #c921c979;
+  }
+}
+.agenda_afternoon_button{
+  border: 2px solid $orange-main;
+  &:hover{
+    background-color: #da6d01;
+    border-color: #da6d01;
+  }
+  &:focus{
+    background-color: #da6e0125;
+    border-color: #da6e01a1;
+  }
+}
+

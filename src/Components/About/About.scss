@@ -1,0 +1,83 @@
+@import '../../Styles/brand-colours.scss';
+.About_Section{
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    padding: 2rem 5rem;
+    width: 100%;
+    
+
+    @media screen and (max-width:700px) {
+      padding: 1rem 2rem;
+    }
+    @media screen and (min-width:701px) {
+      padding: 2rem 4rem;
+    }
+  
+    .About__title_container{
+      display: flex;
+      justify-content: center;
+      .About__title{
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-bottom: $orange_main 2px solid;
+        display: inline-block;
+        width: fit-content;
+        text-align: center;
+        @media screen and (max-width: 600px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .About_Section__main{
+      display: flex;
+
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        padding: 1rem;
+      }
+    }
+  
+    .About__article{
+      width: 80%;
+      @media screen and (max-width:1200px) {
+       width: 100%;
+      }
+      .About__paragraph{
+        margin: 0 0 1.5rem 0;
+        line-height: 1.5rem;
+        font-size: 1rem;
+        @media screen and (max-width: 700px) {
+          font-size: 0.75rem;
+        }
+      }
+    }
+    .About__topics_section{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width:1000px) {
+        flex-wrap: wrap;
+      }
+      .About__topic{
+        display: inline-flex;
+        align-items: center;
+        padding: 0 1.5rem;
+        width: 100%;
+        .topic_icon{
+          width: 70%;
+          margin-right: 0.5rem;
+          @media screen and (max-width:1000px) {
+            width: 15%;
+          }
+        }    
+        .topic__name{
+          font-size: 1rem;
+        }
+      }
+      @media screen and (max-width:700px) {
+        flex-direction: column;
+      }
+    }
+  }

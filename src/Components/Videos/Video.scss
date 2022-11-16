@@ -1,0 +1,185 @@
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.Videos__section{
+  color:#fff;
+  width: 100%;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width:760px) {
+    padding: 1.5rem 1rem;
+  }
+  @media screen and (min-width: 761px) and (max-width:1000px)  {
+    padding: 1.5rem 1rem;
+  }
+    
+ .Videos__title_container{
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  .Videos__title{
+    border-bottom: 1px solid #ff7e00;
+    padding-bottom: 1rem;
+    text-transform: capitalize;
+    }    
+  }
+ 
+ .Video_box_divider{
+   border-right: 5px solid #151231;
+   @media screen and (max-width: 760px) {
+    border: none;
+   }
+ }
+
+ .Videos__container{
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   @media screen and (min-width: 761px) and (max-width:1000px)  {
+    width: 100%;
+    justify-content: center;
+  }
+
+   .Video__box_container{
+     margin: 0 1rem 1.5rem 0;
+     display: flex;
+     width: 45%;
+     @media screen and (max-width: 760px) {
+      width: 100%;
+      flex-direction: column;
+      margin: 0 0 1rem;
+      align-items: center;
+     }
+     .Video__box_image{
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      max-width: 255px;
+      width: 100%;
+      float: left;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      
+      cursor: pointer;
+       &::before{
+         content: '';
+         display: block;
+         padding-bottom: 56.25%;
+       }
+       &:hover::after{
+         transition: all 0.4s ease;
+          color: #ff7e00;
+          border-color: #ff7e00;
+       }
+       &::after{
+        
+        content: '\f04b';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 18px;
+        color: #ffffff;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #ffffff;
+        border-radius: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+         
+       } 
+     }
+   }
+
+   .Video__box_article{
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     padding: 0 1rem;
+     @media screen and (max-width:760px) {
+        margin: 1.5rem 0;
+     }
+     h3,p{
+       margin-top: 0;
+     }
+     .Video__article_desc{
+       color: #ff7e00;
+       font-size: 0.75rem;
+       line-height: 150%;
+     }
+   }
+   
+ }
+}
+
+.video-wall{
+  z-index: 1000;
+  background-color: rgba($color: #151231, $alpha: 0.9);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top:0;
+  left:0;
+  transform: translate(0%, 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  .video-modal{
+    width: 50%;
+    height: 65%;
+    background: linear-gradient(45deg, #0b0a1a,rgba(#ffffff, 0.13), #151231);
+    animation: gradient-move 4s infinite;
+    background-size: 300% 300%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 1rem;
+
+    @media screen and (max-width: 768px) {
+      box-shadow: none;
+      background: none;
+      width: 100%;
+      height:fit-content;
+      padding: 0 1.5rem;
+    }
+    @media screen and (min-width: 769px) and (max-width: 1100px) {
+      padding: 1rem 1rem;
+      width: 80%;
+    }
+  }
+}
+  .video_iframe{
+    width: 100%;
+    height: 100%;
+  }
+
